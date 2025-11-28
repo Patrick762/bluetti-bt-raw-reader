@@ -22,6 +22,28 @@ const tableOutput = document.getElementById("tbody");
 
 // endregion
 
+// region Datasets
+
+// Common fields per iot protocol
+const KnownFields = [
+    [
+        {r: 10, s: 6, name: "Device Type"},
+        {r: 17, s: 4, name: "Serial Number"},
+        {r: 43, s: 1, name: "SOC"},
+        {r: 36, s: 1, name: "DC input power"},
+        {r: 37, s: 1, name: "AC input power"},
+        {r: 38, s: 1, name: "AC output power"},
+        {r: 39, s: 1, name: "DC output power"},
+    ],
+    [
+        {r: 110, s: 6, name: "Device Type"},
+        {r: 116, s: 4, name: "Serial Number"},
+        {r: 102, s: 1, name: "SOC"},
+    ],
+];
+
+// endregion
+
 /**
  * @param {string} hex
  */
@@ -64,8 +86,12 @@ function displayData (obj)
     // Clear table
     tableOutput.innerHTML = "";
 
+    const known = KnownFields[obj.iotVersion - 1];
+
     filteredRegisters.forEach((reg, i) => {
-        if (reg === "0000")
+        const found = known.find(item => item.r === i+1);
+
+        if (reg === "0000" && !found)
         {
             return;
         }
@@ -74,6 +100,9 @@ function displayData (obj)
         const td1 = document.createElement("td");
         const td2 = document.createElement("td");
         const td3 = document.createElement("td");
+        const td4 = document.createElement("td");
+        const td5 = document.createElement("td");
+
         td1.textContent = i + 1;
         td2.textContent = reg;
 
@@ -85,10 +114,21 @@ function displayData (obj)
         }
 
         td3.textContent = str;
+        td4.textContent = parseInt(reg, 16);
+
+        if (found)
+        {
+            td1.style.color = "green";
+            td1.style.fontWeight = "bold";
+
+            td5.textContent = found.name + " (" + found.s + " registers long)";
+        }
 
         row.appendChild(td1);
         row.appendChild(td2);
         row.appendChild(td3);
+        row.appendChild(td4);
+        row.appendChild(td5);
         tableOutput.appendChild(row);
     });
 
