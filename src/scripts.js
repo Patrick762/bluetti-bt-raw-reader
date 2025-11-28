@@ -65,6 +65,11 @@ function displayData (obj)
     tableOutput.innerHTML = "";
 
     filteredRegisters.forEach((reg, i) => {
+        if (reg === "0000")
+        {
+            return;
+        }
+
         const row = document.createElement("tr");
         const td1 = document.createElement("td");
         const td2 = document.createElement("td");
