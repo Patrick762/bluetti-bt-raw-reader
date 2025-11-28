@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main>
+            <h1>Bluetti BT Raw Reader</h1>
+            <div>
+                <h2>Data Input</h2>
+                <form id="form">
+                    <input type="file" id="file" required>
+                    <input type="submit" value="Read data">
+                </form>
+            </div>
+            <div id="dataOutput">
+                <h2>Data Output</h2>
+                <ul>
+                    <li>
+                        Mac-address: <span id="mac"></span>
+                    </li>
+                    <li>
+                        IoT protocol version: <span id="iot"></span>
+                    </li>
+                    <li>
+                        Uses encryption: <span id="enc"></span>
+                    </li>
+                </ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Register address</th>
+                            <th>Hex</th>
+                            <th>ASCII</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </main>
+        <script type="text/javascript" src="scripts.js"></script>
+    </body>
+</html>

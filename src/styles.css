@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+
+    background-color: black;
+    color: gray;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
