@@ -69,7 +69,7 @@ function displayData (obj)
         const td1 = document.createElement("td");
         const td2 = document.createElement("td");
         const td3 = document.createElement("td");
-        td1.textContent = i;
+        td1.textContent = i + 1;
         td2.textContent = reg;
 
         let str = "";
