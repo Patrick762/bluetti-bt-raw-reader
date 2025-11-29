@@ -8,8 +8,8 @@ npm i
 npm start
 ```
 
-After that you can open the tool at http://localhost:8080/
+After that you can open the tool at [http://localhost:8080/](http://localhost:8080/)
 
 ## Using without installation
 
-The tool is also available as simple github page at https://patrick762.github.io/bluetti-bt-raw-reader/src/
+The tool is also available as simple github page at [https://patrick762.github.io/bluetti-bt-raw-reader/src/](https://patrick762.github.io/bluetti-bt-raw-reader/src/)
