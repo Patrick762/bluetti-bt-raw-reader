@@ -9,3 +9,7 @@ npm start
 ```
 
 After that you can open the tool at http://localhost:8080/
+
+## Using without installation
+
+The tool is also available as simple github page at https://patrick762.github.io/bluetti-bt-raw-reader/src/
