@@ -59,6 +59,7 @@ const KnownFields = [
         {r: 144, s: 1, name: "DC input power"},
         {r: 146, s: 1, name: "AC input power"},
         {r: 154, s: 1, name: "PV generated"},
+        {r: 1202, s: 1, name: "PV generated"},
         {r: 1212, s: 1, name: "PV S1 power"},
         {r: 1213, s: 1, name: "PV S1 voltage"},
         {r: 1214, s: 1, name: "PV S1 current"},
@@ -94,6 +95,11 @@ const KnownFields = [
         {r: 1524, s: 1, name: "AC output P3 power"},
         {r: 1525, s: 1, name: "AC output P3 voltage"},
         {r: 1526, s: 1, name: "AC output P3 current"},
+        // Settings
+        {r: 2022, s: 1, name: "SOC start"},
+        {r: 2023, s: 1, name: "SOC end"},
+        // Battery pack
+        {r: 6101, s: 6, name: "Battery type"},
     ],
 ];
 
