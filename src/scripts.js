@@ -95,7 +95,16 @@ const KnownFields = [
         {r: 1524, s: 1, name: "AC output P3 power"},
         {r: 1525, s: 1, name: "AC output P3 voltage"},
         {r: 1526, s: 1, name: "AC output P3 current"},
-        // Settings
+        {r: 2011, s: 1, name: "AC control"},
+        {r: 2012, s: 1, name: "DC control"},
+        {r: 2014, s: 1, name: "DC Eco control"},
+        {r: 2015, s: 1, name: "DC Eco mode"},
+        {r: 2016, s: 1, name: "DC Eco minimum"},
+        {r: 2017, s: 1, name: "AC Eco control"},
+        {r: 2018, s: 1, name: "AC Eco mode"},
+        {r: 2019, s: 1, name: "AC Eco minimum"},
+        {r: 2020, s: 1, name: "Charging mode"},
+        {r: 2021, s: 1, name: "Power Lifting control"},
         {r: 2022, s: 1, name: "SOC start"},
         {r: 2023, s: 1, name: "SOC end"},
         // Battery pack
