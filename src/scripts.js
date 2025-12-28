@@ -107,8 +107,19 @@ const KnownFields = [
         {r: 2021, s: 1, name: "Power Lifting control"},
         {r: 2022, s: 1, name: "SOC start"},
         {r: 2023, s: 1, name: "SOC end"},
-        // Battery pack
+        {r: 2435, s: 1, name: "Grid minimum voltage"},
+        {r: 2436, s: 1, name: "Grid maximum voltage"},
+        {r: 2437, s: 1, name: "Grid minimum frequency"},
+        {r: 2438, s: 1, name: "Grid maximum frequency"},
+        // region Battery pack
         {r: 6101, s: 6, name: "Battery type"},
+        {r: 6107, s: 4, name: "Battery serial number"},
+        {r: 6175, s: 2, name: "Battery BCU version"},
+        {r: 6178, s: 2, name: "Battery BMU version"},
+        {r: 6181, s: 2, name: "Battery Safety module version"},
+        {r: 6184, s: 2, name: "Battery High voltage module version"},
+        // endregion
+        {r: 12002, s: 16, name: "WiFi SSID"},
     ],
 ];
 
@@ -144,7 +155,7 @@ function displayData (obj)
         }
         else
         {
-            for (var i = 0; i < 50; i++)
+            for (var i = 0; i < 10; i++)
             {
                 filteredRegisters.push("0000");
             }
